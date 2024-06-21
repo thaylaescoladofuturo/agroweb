@@ -33,24 +33,32 @@ body {
 nav {
     background-color: rgb(4, 71, 49);
     overflow: hidden;
-    height: 90px; 
-    background-repeat: no-repeat;
-    background-position-x: 2670px;
-    align-items: center;
     display: flex;
     justify-content: center;
-    margin-left: 5px;
+    align-items: center;
+    flex-wrap: wrap; /* Para ajustar os links em dispositivos menores */
+    padding: 10px; /* Adicione um espaçamento interno aos links */
 }
 
 nav a {
-    display: block;
     color: rgb(242, 236, 228);
     text-align: center;
-    padding: 25px 35px;
+    padding: 10px 15px; /* Reduza o espaçamento interno dos links */
     text-decoration: none;
-    flex-wrap: wrap; /* Para ajustar os links em dispositivos menores */
+    transition: background-color 0.3s;
 }
 
+@media (max-width: 768px) {
+    nav {
+        justify-content: flex-start; /* Alinhe os links à esquerda */
+        padding: 0; /* Remova o espaçamento interno */
+    }
+
+    nav a {
+        padding: 10px; /* Reduza ainda mais o espaçamento dos links */
+        font-size: 16px; /* Reduza o tamanho da fonte para dispositivos menores */
+    }
+}
 nav a:hover {
     background-color: rgb(233, 230, 230);
     color: rgb(54, 54, 72);
