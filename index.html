@@ -48,6 +48,7 @@ nav a {
     text-align: center;
     padding: 25px 35px;
     text-decoration: none;
+    flex-wrap: wrap; /* Para ajustar os links em dispositivos menores */
 }
 
 nav a:hover {
@@ -62,6 +63,8 @@ a {
 img {
     height: 120px;
     width: 120px;
+    margin: 0 auto; /* Centraliza a imagem */
+    
 }
 
 #zap {
@@ -96,6 +99,12 @@ footer {
     float: right;
     
 }
+@media (min-width: 768px) {
+            /* Estilos específicos para telas maiores (tablets e desktops) */
+            h1 {
+                font-size: 60px;
+            }
+        }
 </style>
 
 </head>
